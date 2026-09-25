@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山海大鹏 · 鹏城之根 | 深圳大鹏新区形象宣传</title>
+<meta name="description" content="深圳大鹏新区形象宣传页：概览新区、人文历史、生态山海、产业未来。山海大鹏，鹏城之根。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f3ec; --card:#fffdf8; --ink:#2c3532; --ink-soft:#5f6a66;
+  --sea:#2e6e67; --sea-deep:#1f4f4a; --sand:#d8c9a8; --seal:#a63a2b;
+  --line:rgba(44,53,50,.14);
+  --serif:"Noto Serif SC","Songti SC","SimSun",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-weight:400;
+  background-image:radial-gradient(rgba(44,53,50,.035) 1px,transparent 1px);background-size:26px 26px;}
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:100px 0;scroll-margin-top:76px}
+[id]{scroll-margin-top:84px}
+h1,h2,h3,h4,.serif{font-family:var(--serif)}
+
+/* ---------- 导航（含二级菜单） ---------- */
+.nav{position:fixed;top:0;left:0;right:0;height:64px;z-index:50;
+  background:rgba(246,243,236,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;letter-spacing:.22em;font-size:15px;font-family:var(--serif);color:var(--sea-deep)}
+.seal-sm{width:26px;height:26px;background:var(--seal);color:#fff;display:grid;place-items:center;
+  font-size:14px;border-radius:4px;font-family:var(--serif);transform:rotate(-3deg)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links>li{position:relative}
+.nav-links a{font-size:14px;letter-spacing:.12em;color:var(--ink-soft);text-decoration:none;position:relative;padding:6px 0;display:block;transition:color .3s}
+.nav-links>li>a::before{content:'';position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--seal);transition:right .35s}
+.nav-links>li>a:hover,.nav-links>li>a.active{color:var(--sea-deep)}
+.nav-links>li>a:hover::before,.nav-links>li>a.active::before{right:0}
+.has-sub>a::after{content:'▾';font-size:10px;margin-left:6px;display:inline-block;transition:transform .25s}
+.dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(10px);
+  background:var(--card);border:1px solid var(--line);min-width:158px;padding:8px 0;z-index:60;
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+  box-shadow:0 18px 36px rgba(31,79,74,.14)}
+.dropdown a{display:block;padding:10px 20px;font-size:13px;letter-spacing:.12em;color:var(--ink-soft);white-space:nowrap;transition:.25s}
+.dropdown a:hover,.dropdown a.active{color:var(--sea-deep);background:rgba(46,110,103,.07)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:4px;width:38px;height:34px;cursor:pointer;color:var(--sea-deep);font-size:16px}
+@media (min-width:901px){
+  .has-sub:hover .dropdown,.has-sub:focus-within .dropdown{opacity:1;transform:translateX(-50%) translateY(2px);pointer-events:auto}
+  .has-sub:hover>a::after{transform:rotate(180deg)}
+}
+
+/* ---------- 首屏 ---------- */
+#home{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 160px;
+  background:linear-gradient(180deg,#f2f5f1 0%,#e9f0ea 55%,#dfe9e4 100%)}
+.hero-inner{display:flex;align-items:center;justify-content:space-between;gap:56px;position:relative;z-index:2}
+.hero-vertical{display:flex;gap:34px;align-items:flex-start}
+.hero-title-v{writing-mode:vertical-rl;font-size:clamp(46px,7vw,84px);letter-spacing:.3em;font-weight:600;color:var(--sea-deep)}
+.hero-sub-v{writing-mode:vertical-rl;font-size:clamp(15px,1.8vw,20px);letter-spacing:.55em;color:var(--ink-soft);margin-top:6px}
+.hero-text{max-width:400px}
+.hero-text .kicker{font-size:12px;letter-spacing:.45em;color:var(--seal);margin-bottom:18px}
+.hero-text p{line-height:2.1;color:var(--ink-soft);font-size:15px;letter-spacing:.05em;margin-bottom:26px}
+.hero-seal{display:inline-flex;align-items:center;gap:12px;font-family:var(--serif);letter-spacing:.2em;color:var(--sea-deep);font-size:14px}
+.hero-seal i{width:38px;height:38px;background:var(--seal);color:#fff;display:grid;place-items:center;border-radius:5px;
+  font-style:normal;font-size:19px;transform:rotate(-4deg);box-shadow:2px 3px 0 rgba(166,58,43,.25)}
+.landscape{position:absolute;left:0;right:0;bottom:0;z-index:1;pointer-events:none}
+.landscape svg{display:block;width:100%;height:auto}
+.sea-waves{position:absolute;left:0;right:0;bottom:0;height:64px;overflow:hidden;z-index:1}
+.sea-waves div{position:absolute;bottom:0;left:0;width:200%;height:100%;background-repeat:repeat-x;background-size:120px 30px;background-position:0 bottom}
+.w1{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='30' viewBox='0 0 120 30'%3E%3Cpath d='M0 15 Q30 0 60 15 T120 15 V30 H0 Z' fill='%235d8b84' fill-opacity='.45'/%3E%3C/svg%3E");animation:drift 16s linear infinite}
+.w2{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='30' viewBox='0 0 120 30'%3E%3Cpath d='M0 15 Q30 2 60 15 T120 15 V30 H0 Z' fill='%232e6e67' fill-opacity='.55'/%3E%3C/svg%3E");animation:drift 10s linear infinite reverse}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-120px)}}
+.scroll-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:3;
+  font-size:11px;letter-spacing:.5em;color:var(--ink-soft);text-align:center}
+.scroll-hint span{display:block;width:1px;height:34px;background:var(--ink-soft);margin:8px auto 0;animation:drip 2s ease infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1)}100%{opacity:0}}
+
+/* ---------- 章节标题与子栏目 ---------- */
+.sec-kicker{font-size:12px;letter-spacing:.5em;color:var(--seal);margin-bottom:14px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);letter-spacing:.14em;color:var(--sea-deep);font-weight:600}
+.sec-en{font-size:11px;letter-spacing:.4em;color:var(--ink-soft);text-transform:uppercase;margin-top:10px}
+.sec-rule{display:flex;align-items:center;gap:12px;margin:26px 0 52px}
+.sec-rule::before,.sec-rule::after{content:'';height:1px;background:var(--line);flex:1}
+.sec-rule i{width:7px;height:7px;background:var(--seal);transform:rotate(45deg)}
+.sec-intro{max-width:760px;line-height:2.15;color:var(--ink-soft);font-size:15px;letter-spacing:.04em;margin-bottom:56px}
+.sub-block{margin-bottom:72px}
+.sub-block:last-child{margin-bottom:0}
+.sub-title{display:flex;align-items:center;gap:14px;font-size:22px;letter-spacing:.12em;color:var(--ink);margin-bottom:24px}
+.sub-title .dot{width:8px;height:8px;background:var(--seal);transform:rotate(45deg);flex:none}
+.sub-title .icon{width:42px;height:42px;border:1px solid var(--sea);border-radius:50%;display:grid;place-items:center;color:var(--sea);flex:none}
+.body-text{color:var(--ink-soft);line-height:2.1;font-size:15px;max-width:840px;margin-bottom:16px;letter-spacing:.03em}
+
+/* ---------- 数据 ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:36px}
+.stat{background:var(--card);padding:38px 30px}
+.stat-num{font-family:var(--serif);font-size:clamp(34px,4vw,46px);color:var(--sea-deep);line-height:1}
+.stat-num small{font-size:15px;color:var(--sea);margin-left:4px;letter-spacing:.1em}
+.stat-label{margin-top:12px;font-size:13px;letter-spacing:.12em;color:var(--ink-soft);line-height:1.7}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{padding:9px 18px;border:1px solid var(--line);border-radius:999px;font-size:13px;letter-spacing:.1em;
+  color:var(--ink-soft);background:var(--card);transition:.3s}
+.chip:hover{border-color:var(--sea);color:var(--sea-deep);transform:translateY(-2px)}
+
+/* ---------- 时间线 ---------- */
+.timeline{position:relative;padding-left:34px;border-left:1px solid var(--line);max-width:780px}
+.t-item{position:relative;padding-bottom:48px}
+.t-item:last-child{padding-bottom:0}
+.t-item::before{content:'';position:absolute;left:-39px;top:5px;width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--sea)}
+.t-year{font-family:var(--serif);color:var(--seal);letter-spacing:.2em;font-size:14px}
+.t-title{font-size:20px;letter-spacing:.08em;margin:8px 0 10px;color:var(--ink)}
+.t-desc{color:var(--ink-soft);line-height:2.05;font-size:14.5px;letter-spacing:.03em;max-width:700px}
+
+/* ---------- 重点展示框 ---------- */
+.highlight{border:1px solid var(--line);background:var(--card);padding:44px 40px;position:relative;max-width:840px}
+.highlight::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--seal)}
+.highlight h4{font-size:19px;letter-spacing:.12em;margin-bottom:16px;color:var(--sea-deep)}
+.highlight p{color:var(--ink-soft);line-height:2.1;font-size:14.5px}
+
+/* ---------- 非遗陈列 ---------- */
+.heritage{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:880px}
+.h-item{background:var(--card);border:1px solid var(--line);padding:26px 28px;transition:.3s}
+.h-item:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(31,79,74,.08)}
+.h-item h4{font-size:16px;letter-spacing:.1em;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.h-item .tag{font-size:11px;color:#fff;background:var(--seal);padding:3px 9px;border-radius:3px;letter-spacing:.15em;font-family:var(--sans);flex:none}
+.h-item p{font-size:13.5px;color:var(--ink-soft);line-height:1.95}
+
+/* ---------- 科普注脚 ---------- */
+.sci{margin-top:20px;padding:14px 18px;border-left:2px solid var(--sand);background:rgba(216,201,168,.16);
+  font-size:13.5px;color:var(--ink-soft);line-height:1.95;max-width:840px}
+.sci b{color:var(--seal);letter-spacing:.15em;font-weight:600;margin-right:8px}
+
+/* ---------- 卡片（产业） ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--card);border:1px solid var(--line);padding:34px 30px;border-radius:2px;position:relative;
+  transition:transform .35s ease,box-shadow .35s ease}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(31,79,74,.10)}
+.card .icon{width:46px;height:46px;border:1px solid var(--sea);border-radius:50%;display:grid;place-items:center;color:var(--sea);margin-bottom:20px}
+.card h3{font-size:18px;letter-spacing:.1em;margin-bottom:12px;color:var(--ink)}
+.card p{color:var(--ink-soft);line-height:2;font-size:13.5px;letter-spacing:.03em}
+
+/* ---------- 引述 ---------- */
+.quote{margin-top:56px;max-width:780px;text-align:center;padding:44px 28px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.quote p{font-family:var(--serif);font-size:clamp(17px,2.2vw,21px);line-height:2.2;letter-spacing:.08em;color:var(--ink)}
+.quote .from{display:block;margin-top:18px;font-size:12px;letter-spacing:.3em;color:var(--ink-soft)}
+
+/* ---------- 尾声 ---------- */
+#epilogue{background:var(--sea-deep);color:#e8efeb;text-align:center;padding:110px 0 0}
+#epilogue .e-kicker{font-size:12px;letter-spacing:.5em;color:var(--sand);margin-bottom:26px}
+#epilogue h2{font-size:clamp(24px,3.4vw,34px);letter-spacing:.18em;line-height:2;font-weight:600}
+#epilogue .e-en{margin-top:20px;font-size:11px;letter-spacing:.45em;color:rgba(232,239,235,.55);text-transform:uppercase}
+#epilogue .seal-sm{margin:34px auto 0;width:40px;height:40px;font-size:20px}
+footer{margin-top:90px;border-top:1px solid rgba(232,239,235,.16);padding:30px 0;font-size:12px;
+  letter-spacing:.12em;color:rgba(232,239,235,.6);line-height:2}
+
+/* ---------- 交互 ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+#top-btn{position:fixed;right:28px;bottom:28px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);
+  background:var(--card);color:var(--sea-deep);font-size:17px;cursor:pointer;z-index:40;
+  opacity:0;pointer-events:none;transition:.35s;box-shadow:0 8px 22px rgba(31,79,74,.12)}
+#top-btn.show{opacity:1;pointer-events:auto}
+#top-btn:hover{background:var(--sea);color:#fff}
+
+@media (max-width:900px){
+  .menu-btn{display:block}
+  .nav-links{position:fixed;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);
+    border-bottom:1px solid var(--line);padding:8px 24px 16px;opacity:0;transform:translateY(-10px);
+    pointer-events:none;transition:.3s;max-height:calc(100vh - 64px);overflow-y:auto}
+  .nav-links.open{opacity:1;transform:none;pointer-events:auto}
+  .nav-links>li{padding:10px 0;border-bottom:1px dashed var(--line)}
+  .nav-links>li:last-child{border-bottom:none}
+  .dropdown{position:static;transform:none;opacity:1;pointer-events:auto;box-shadow:none;border:none;
+    background:transparent;min-width:0;padding:0 0 0 16px;max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .has-sub.open .dropdown{max-height:320px}
+  .dropdown a{padding:8px 0;font-size:13px;white-space:normal}
+  .hero-inner{flex-direction:column-reverse;gap:40px;text-align:left}
+  .cards{grid-template-columns:1fr}
+  .heritage{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){.stats{grid-template-columns:1fr}.hero-vertical{gap:22px}}
+</style>
+</head>
+<body>
+
+<!-- 导航（含二级菜单） -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <div class="brand"><span class="seal-sm">鹏</span>大鹏新区</div>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">序</a></li>
+      <li class="has-sub">
+        <a href="#overview">概览·新区</a>
+        <div class="dropdown">
+          <a href="#ov-intro">新区速览</a>
+          <a href="#ov-mission">定位与使命</a>
+          <a href="#ov-honors">荣誉名录</a>
+        </div>
+      </li>
+      <li class="has-sub">
+        <a href="#culture">人文·历史</a>
+        <div class="dropdown">
+          <a href="#cu-timeline">千年时间线</a>
+          <a href="#cu-highlight">重点风物</a>
+          <a href="#cu-heritage">非遗风物</a>
+        </div>
+      </li>
+      <li class="has-sub">
+        <a href="#ecology">生态·山海</a>
+        <div class="dropdown">
+          <a href="#eco-geo">火山地质公园</a>
+          <a href="#eco-coast">海岸与沙滩</a>
+          <a href="#eco-mangrove">红树林湿地</a>
+          <a href="#eco-coral">珊瑚海湾</a>
+        </div>
+      </li>
+      <li class="has-sub">
+        <a href="#industry">产业·未来</a>
+        <div class="dropdown">
+          <a href="#in-bio">国际生物谷</a>
+          <a href="#in-marine">向海图强</a>
+          <a href="#in-tour">全域旅游</a>
+          <a href="#in-vision">蓝图展望</a>
+        </div>
+      </li>
+      <li><a href="#epilogue">尾声</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- 序 · 首屏 -->
+<section id="home">
+  <div class="container hero-inner">
+    <div class="hero-vertical">
+      <h1 class="hero-title-v">山海大鹏</h1>
+      <div class="hero-sub-v">鹏城之根 · 生态之屏</div>
+    </div>
+    <div class="hero-text">
+      <div class="kicker">深圳大鹏新区 · 形象宣传</div>
+      <p>三面环海，山海相拥。这里是深圳的东南门户，是「鹏城」之名的源头，
+         也是这座城市留给未来的生态底稿——六百年的城垣与上亿年的岩层，
+         在同一片海岸线上静静相望。</p>
+      <div class="hero-seal"><i>印</i>大鹏守御千户所城 · 明洪武二十七年</div>
+    </div>
+  </div>
+  <div class="landscape" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <circle cx="1150" cy="86" r="38" fill="#c96f52" opacity=".45"/>
+      <path d="M0 220 L180 140 L320 200 L480 110 L640 190 L820 120 L1000 190 L1180 130 L1320 190 L1440 150 V320 H0 Z" fill="#c7d8d0"/>
+      <path d="M0 260 L160 190 L340 240 L520 170 L700 235 L900 175 L1080 240 L1260 185 L1440 235 V320 H0 Z" fill="#9dbcb1"/>
+      <path d="M0 300 L200 240 L420 285 L640 235 L860 285 L1080 240 L1300 285 L1440 250 V320 H0 Z" fill="#6f9a8f"/>
+    </svg>
+  </div>
+  <div class="sea-waves" aria-hidden="true"><div class="w1"></div><div class="w2"></div></div>
+  <div class="scroll-hint">向下探寻<span></span></div>
+</section>
+
+<!-- 壹 · 概览新区 -->
+<section id="overview">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">章 一</div>
+      <h2>概览 · 新区</h2>
+      <div class="sec-en">Chapter 01 — The New District</div>
+    </div>
+    <div class="sec-rule reveal"></div>
+
+    <div class="sub-block reveal" id="ov-intro">
+      <h3 class="sub-title"><span class="dot"></span>半城山海，一方半岛</h3>
+      <p class="body-text">大鹏新区于 2011 年 12 月 30 日正式挂牌成立，地处深圳东南端的大鹏半岛。这里三面环海：
+        东临大亚湾，与惠州接壤；西抱大鹏湾，遥望香港新界——是粤港澳大湾区的重要节点，也是深圳面朝大海的门户。</p>
+      <p class="body-text">辖区陆域面积约 295 平方公里，约占全市七分之一，海域规划面积约 1380 平方公里，
+        下辖葵涌、大鹏、南澳三个街道、25 个社区。约 133 公里海岸线蜿蜒于半岛之间，约占深圳全市海岸线的一半；
+        全市 50 个天然沙滩中，有 48 个散落在这条岸线之上。</p>
+      <div class="stats">
+        <div class="stat"><div class="stat-num"><span data-count="2011">0</span></div><div class="stat-label">新区成立年份</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="295">0</span><small>km²</small></div><div class="stat-label">陆域面积 · 约占全市 1/7</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="133">0</span><small>km</small></div><div class="stat-label">海岸线 · 约占全市 1/2</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="77">0</span><small>%+</small></div><div class="stat-label">森林覆盖率</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="48">0</span><small>个</small></div><div class="stat-label">天然沙滩 · 全市共 50 个</div></div>
+        <div class="stat"><div class="stat-num"><span data-count="14">0</span><small>年</small></div><div class="stat-label">空气质量综合指数连续全市第一</div></div>
+      </div>
+    </div>
+
+    <div class="sub-block reveal" id="ov-mission">
+      <h3 class="sub-title"><span class="dot"></span>定位与使命</h3>
+      <p class="body-text">深圳赋予大鹏「生态基石、文化之根、旅游旺区」的功能定位。按照新区国民经济和社会发展
+        第十四个五年规划，到 2025 年，大鹏将基本建成世界级滨海生态旅游度假区和全球海洋中心城市集中承载区，
+        并向着更具全球影响力的生态半岛稳步迈进。</p>
+    </div>
+
+    <div class="sub-block reveal" id="ov-honors">
+      <h3 class="sub-title"><span class="dot"></span>荣誉名录</h3>
+      <p class="body-text">生态，是大鹏最厚的家底。近年来，新区先后摘得多项国家级生态荣誉；
+        大鹏湾全域获评国家「美丽海湾」，大亚湾亦入选全国「美丽海湾」优秀案例——一湾海水，两张国家级名片。</p>
+      <div class="chips">
+        <span class="chip">国家生态文明建设示范区</span>
+        <span class="chip">国家生态文明先行示范区</span>
+        <span class="chip">国家级海洋生态文明建设示范区</span>
+        <span class="chip">国家级海洋牧场示范区</span>
+        <span class="chip">国家「绿水青山就是金山银山」实践创新基地</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 贰 · 人文历史 -->
+<section id="culture">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">章 二</div>
+      <h2>人文 · 历史</h2>
+      <div class="sec-en">Chapter 02 — Heritage &amp; Memory</div>
+    </div>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-intro reveal">七千年前，先民在大鹏湾畔燃起炊烟；六百年前，将士在南海之滨垒起城垣。
+      大鹏是深圳的「文化之根」，也是「鹏城」之名的源头——城砖有记，山歌有声，这里的薪火从未断绝。</p>
+
+    <div class="sub-block reveal" id="cu-timeline">
+      <h3 class="sub-title"><span class="dot"></span>千年时间线</h3>
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-year">约 6000—7000 年前</div>
+          <div class="t-title serif">咸头岭遗址 · 文明曙光</div>
+          <p class="t-desc">位于大鹏街道咸头岭村，是珠江三角洲地区发现的时代最早的史前遗址之一。
+            遗址于 1981 年考古普查中发现，出土遗存涵盖新石器时代至商周时期，2006 年入选当年「全国十大考古新发现」，
+            被誉为深圳文化之根。</p>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">明洪武二十七年 · 1394</div>
+          <div class="t-title serif">大鹏所城始建</div>
+          <p class="t-desc">全称「大鹏守御千户所城」，隶属南海卫，占地约 10 万平方米。
+            自此，这座滨海军城成为明清两代岭南重要的海防军事要塞。</p>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">明清两代</div>
+          <div class="t-title serif">海防岁月与「鹏城」之名</div>
+          <p class="t-desc">所城在抗击葡萄牙、倭寇与英殖民主义者的斗争中屡建功勋，名动南海；
+            深圳别称「鹏城」，正源于这座古城。</p>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">2001</div>
+          <div class="t-title serif">列入全国重点文物保护单位</div>
+          <p class="t-desc">大鹏所城入选第五批全国重点文物保护单位，成为深圳首个「国保」单位，
+            并跻身中国历史文化名村之列。</p>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">2007</div>
+          <div class="t-title serif">大鹏清醮列入省级非遗</div>
+          <p class="t-desc">「大鹏追念英烈习俗」源于所城祭祀阵亡将士与出海罹难者的传统，
+            五年一届，仪典七日，最后以千人共享的「将军宴」收束。</p>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-year">2011</div>
+          <div class="t-title serif">大鹏新区挂牌成立</div>
+          <p class="t-desc">12 月 30 日，大鹏新区正式挂牌。山海进入新的时代，
+            古城与新区在同一片土地上续写篇章。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-block reveal" id="cu-highlight">
+      <h3 class="sub-title"><span class="dot"></span>重点风物 · 南门楼</h3>
+      <div class="highlight">
+        <h4>走进古城：大鹏所城南门楼</h4>
+        <p>南门楼是大鹏所城的正门，始建于明洪武二十七年（1394 年），坐北朝南，面阔 25 米、进深 12 米、通高 11 米，
+          占地面积约 300 平方米。门前城墙、马面与城垛依旧挺立，砖石之间尽是六百年的海风与烽烟。
+          如今的所城内，21 处文物古迹星罗棋布，明清街巷纵横交错，是国内现存最完好的明清海防城之一。</p>
+      </div>
+    </div>
+
+    <div class="sub-block reveal" id="cu-heritage">
+      <h3 class="sub-title"><span class="dot"></span>非遗风物</h3>
+      <div class="heritage">
+        <div class="h-item">
+          <h4>大鹏清醮 <span class="tag">省级非遗</span></h4>
+          <p>大鹏追念英烈习俗，源于所城祭祀阵亡将士与出海罹难者的传统，五年一届、仪典七日，
+            以千人同席的「将军宴」作结，是所城最隆重的民俗仪式。</p>
+        </div>
+        <div class="h-item">
+          <h4>大鹏山歌</h4>
+          <p>以本土方言传唱的半岛民歌，上山下海、婚嫁节庆皆可成曲，是山海间世代相传的声音记忆。</p>
+        </div>
+        <div class="h-item">
+          <h4>南澳海胆粽制作技艺</h4>
+          <p>南澳三面环海、盛产海胆。以新鲜海胆入粽，是这座滨海渔乡独有的时令风味。</p>
+        </div>
+        <div class="h-item">
+          <h4>客家嫁歌</h4>
+          <p>葵涌一带客家人在婚嫁礼俗中传唱的歌谣，口耳相传，保留着旧时生活的温度与质朴。</p>
+        </div>
+        <div class="h-item">
+          <h4>大鹏打米饼</h4>
+          <p>以木槌打米成饼的传统技艺。逢年过节的米饼香，是所城人家记忆里的味道。</p>
+        </div>
+        <div class="h-item">
+          <h4>葵涌民间谚语</h4>
+          <p>口口相传的民间文学，将渔耕生产、潮汐气象与处世智慧凝练成一句句短小精悍的俗语。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 叁 · 生态山海 -->
+<section id="ecology">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">章 三</div>
+      <h2>生态 · 山海</h2>
+      <div class="sec-en">Chapter 03 — Ecology &amp; Nature</div>
+    </div>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-intro reveal">295 平方公里的陆域之上，森林覆盖率超过 77%；133 公里的海岸线上，
+      近岸海域水质长期保持Ⅰ类，空气质量综合指数连续 14 年全市第一，2025 年 PM2.5 平均浓度仅为
+      13.5 微克/立方米。大鹏是深圳的生态基石，也是一座向所有人开放的自然博物馆。</p>
+
+    <div class="sub-block reveal" id="eco-geo">
+      <h3 class="sub-title">
+        <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 19 L9 8 L13 14 L16 10 L21 19 Z"/></svg></span>
+        火山地质 · 国家地质公园
+      </h3>
+      <p class="body-text">2005 年 9 月，国土资源部批准设立深圳大鹏半岛国家地质公园，以整个大鹏半岛为公园概念范围，
+        地质遗迹保护面积达 150 平方千米。公园的核心是七娘山：主峰海拔 867.4 米，为深圳第二高峰，
+        三面环海、山高谷深，溪涧蜿蜒，云雾常在。</p>
+      <div class="sci"><b>科普</b>七娘山是一座古火山喷发盆地，晚侏罗纪火山活动形成的火山地貌保存完好，
+        是研究东南沿海火山活动演化的「永久性文献」。</div>
+    </div>
+
+    <div class="sub-block reveal" id="eco-coast">
+      <h3 class="sub-title">
+        <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 9 c3 -3 5 -3 8 0 s5 3 8 0"/><path d="M2 15 c3 -3 5 -3 8 0 s5 3 8 0"/></svg></span>
+        银滩百里 · 海岸与沙滩
+      </h3>
+      <p class="body-text">大鹏半岛拥有约 133 公里海岸线，约占全市二分之一；全市 50 个天然沙滩中，48 个位于新区辖内。
+        位于西涌湾的西涌沙滩，是「中国最美八大海岸线」的起点，也是深圳海滩最大、腹地最广的海滨；
+        西涌、东涌等一座座沙滩，如珍珠般串连在半岛岸线之上。</p>
+      <div class="sci"><b>科普</b>大鹏湾自然岸线保有率超过 60%。基岩岸、砂质岸等自然岸线，
+        是潮间带生物栖息与海岸带生态稳定的重要基础。</div>
+    </div>
+
+    <div class="sub-block reveal" id="eco-mangrove">
+      <h3 class="sub-title">
+        <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21 V9"/><path d="M12 13 C12 8 8 6 5 6 c0 5 3 7 7 7"/><path d="M12 10 c0 -4 4 -6 7 -6 c0 4 -3 6 -7 6"/></svg></span>
+        海上森林 · 红树林湿地
+      </h3>
+      <p class="body-text">大鹏新区的红树群落主要分布在坝光、东涌等地。东涌河口红树林面积约 67 亩，
+        生长着海漆、秋茄、桐花等品种，是深圳最大的海漆群落；东涌红树林湿地园总占地约 49.4 万平方米。
+        如今，坝光银叶树湿地园、东涌红树林湿地园、新大禾塘湿地园等共同构成兼具亲海、休闲与科普功能的红树林公园群。</p>
+      <div class="sci"><b>科普</b>红树林是生长在热带、亚热带海岸潮间带的植物群落，根系发达，
+        既能消浪护岸，又是鱼虾贝类的育幼场，被称为「海岸卫士」。</div>
+    </div>
+
+    <div class="sub-block reveal" id="eco-coral">
+      <h3 class="sub-title">
+        <span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21 V11"/><path d="M12 11 V5 M12 8 L8 4 M12 8 L16 4 M12 13 L7 9 M12 13 L17 9"/></svg></span>
+        海底花园 · 珊瑚海湾
+      </h3>
+      <p class="body-text">少有人想到，大湾区的海面之下也藏着一片「海底花园」：大鹏湾分布着蜂巢珊瑚、角蜂巢珊瑚、
+        陀螺珊瑚、滨珊瑚等珊瑚超过 60 种。近年来，新区持续加强珊瑚、红树林与自然岸线的生态修复，
+        并守护着国家级海洋牧场的渔业资源。</p>
+      <div class="sci"><b>科普</b>珊瑚看似石头，实则是无数珊瑚虫聚居而成的海洋动物群落；
+        清澈的Ⅰ类海水与充足的光照，是它们安家落户的前提。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 肆 · 产业未来 -->
+<section id="industry">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-kicker">章 四</div>
+      <h2>产业 · 未来</h2>
+      <div class="sec-en">Chapter 04 — Industry &amp; Future</div>
+    </div>
+    <div class="sec-rule reveal"></div>
+    <p class="sec-intro reveal">绿水青山，就是金山银山。大鹏围绕「生态」二字书写转型答卷：
+      以生物健康为笔，以海洋科技为墨，以全域旅游为纸——在保护中发展，在发展中实现更高层次的保护。</p>
+
+    <div class="sub-block reveal" id="in-bio">
+      <h3 class="sub-title"><span class="dot"></span>国际生物谷 · 生命健康</h3>
+      <p class="body-text">深圳国际生物谷是深圳布局生命健康产业的重要载体，核心区落子大鹏新区坝光。
+        坝光白沙湾公园总占地面积约 16.75 公顷，依海而建；位于葵涌街道的生命科学产业园，
+        由原奔康工业区升级改造而成，正成为生命科学企业集聚的一方热土。</p>
+    </div>
+
+    <div class="sub-block reveal" id="in-marine">
+      <h3 class="sub-title"><span class="dot"></span>向海图强 · 海洋强区</h3>
+      <p class="body-text">深圳海洋大学落户坝光，集聚全球海洋高端人才与科研资源，打造一流海洋科技研发平台；
+        叠加国家级海洋牧场示范区建设，大鹏正加快打造全球海洋中心城市集中承载区，
+        让「靠海」真正走向「向海」。</p>
+    </div>
+
+    <div class="sub-block reveal" id="in-tour">
+      <h3 class="sub-title"><span class="dot"></span>全域旅游 · 度假胜地</h3>
+      <p class="body-text">大鹏新区以「一体两翼」格局推进高端化全域旅游：大鹏所城文化旅游区让古城文化与滨海风光相融，
+        较场尾民宿群成为都市人周末微度假的热门之选。山海生态与人文场景互为表里，
+        世界级滨海生态旅游度假区的轮廓日渐清晰。</p>
+    </div>
+
+    <div class="sub-block reveal" id="in-vision">
+      <h3 class="sub-title"><span class="dot"></span>蓝图展望</h3>
+      <div class="quote">
+        <p>「到 2025 年，基本建成世界级滨海生态旅游度假区<br>和全球海洋中心城市集中承载区。」</p>
+        <span class="from">—— 大鹏新区国民经济和社会发展第十四个五年规划纲要</span>
+      </div>
+      <p class="body-text" style="margin-top:40px">从古所的渔火，到深蓝色的未来，大鹏正在证明：
+        生态优先之路，可以越走越宽。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 尾声 -->
+<section id="epilogue">
+  <div class="container">
+    <div class="e-kicker reveal">尾 声</div>
+    <h2 class="reveal">山海为卷，岁月为注。<br>大鹏，正以生态之笔，<br>书写深圳的下一章。</h2>
+    <div class="e-en reveal">Where Mountains Meet the Sea</div>
+    <div class="seal-sm reveal">鹏</div>
+    <footer>
+      <div class="container">
+        深圳大鹏新区形象宣传页 · 2026<br>
+        资料参考：大鹏新区政府在线、深圳市人民政府门户网站等公开资料
+      </div>
+    </footer>
+  </div>
+</section>
+
+<button id="top-btn" aria-label="回到顶部">↑</button>
+
+<script>
+// ---------- 基础滚动态 ----------
+const nav = document.getElementById('nav');
+const topBtn = document.getElementById('top-btn');
+addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 10);
+  topBtn.classList.toggle('show', scrollY > 600);
+}, {passive:true});
+topBtn.onclick = () => scrollTo({top:0, behavior:'smooth'});
+
+// ---------- 移动端菜单 ----------
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.onclick = () => navLinks.classList.toggle('open');
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// ---------- 移动端二级菜单（手风琴） ----------
+const isMobile = () => matchMedia('(max-width:900px)').matches;
+document.querySelectorAll('.has-sub').forEach(li => {
+  li.querySelector(':scope > a').addEventListener('click', e => {
+    if (isMobile()) {
+      e.preventDefault();
+      document.querySelectorAll('.has-sub.open').forEach(o => { if (o !== li) o.classList.remove('open'); });
+      li.classList.toggle('open');
+    }
+  });
+});
+
+// ---------- 滚动联动高亮（章节 + 子栏目） ----------
+const spyMap = [
+  ['home',     ['home']],
+  ['overview', ['overview','ov-intro','ov-mission','ov-honors']],
+  ['culture',  ['culture','cu-timeline','cu-highlight','cu-heritage']],
+  ['ecology',  ['ecology','eco-geo','eco-coast','eco-mangrove','eco-coral']],
+  ['industry', ['industry','in-bio','in-marine','in-tour','in-vision']],
+  ['epilogue', ['epilogue']],
+];
+const flat = [];
+spyMap.forEach(([navId, ids]) => ids.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) flat.push({el, navId, subId: id});
+}));
+const topLinks = [...document.querySelectorAll('.nav-links > li > a')];
+const subLinks = [...document.querySelectorAll('.dropdown a')];
+function spy(){
+  let cur = flat[0];
+  for (const f of flat) {
+    if (f.el.getBoundingClientRect().top <= 140) cur = f;
+  }
+  topLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur.navId));
+  subLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur.subId));
+}
+addEventListener('scroll', spy, {passive:true});
+spy();
+
+// ---------- 进入视口渐显 ----------
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ---------- 数字滚动 ----------
+const cio = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, target = +el.dataset.count, t0 = performance.now(), dur = 1400;
+  (function tick(t){
+    const p = Math.min((t - t0) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * ease);
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+  cio.unobserve(el);
+}), {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+</script>
+</body>
+</html>
+//爱你老己早点睡
